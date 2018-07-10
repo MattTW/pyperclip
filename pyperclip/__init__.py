@@ -95,8 +95,8 @@ class PyperclipWindowsException(PyperclipException):
 
 
 def _stringifyText(text):
-    if not isinstance(text, (str, int, float, bool)):
-        raise PyperclipException('only str, int, float, and bool values can be copied to the clipboard, not %s' % (text.__class__.__name__))
+    if not isinstance(text, (str, unicode, int, float, bool)):
+        raise PyperclipException('only str, unicode, int, float, and bool values can be copied to the clipboard, not %s' % (text.__class__.__name__))
     return str(text)
 
 
